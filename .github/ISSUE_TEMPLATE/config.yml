@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📚 High School Management System Documentation
+    url: https://github.com/garyjyao2/skills-expand-your-team-with-copilot/blob/main/README.md
+    about: Read the documentation and user guide for the system
+  - name: 💬 Emergency Technical Support
+    url: mailto:tech-support@mergingtonhigh.edu
+    about: For urgent technical issues that prevent system access (use only for emergencies)

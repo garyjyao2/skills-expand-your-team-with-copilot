@@ -1,0 +1,177 @@
+name: 📝 Content Update Request
+description: Request updates to text, information, or data in the High School Management System
+title: "[CONTENT] "
+labels: ["content", "data-update", "teacher-request"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for requesting a content update! This template will help you specify exactly what information needs to be changed, added, or removed.
+
+  - type: dropdown
+    id: content-type
+    attributes:
+      label: 📋 Type of Content Update
+      description: What kind of content needs to be updated?
+      options:
+        - Activity information (name, description, details)
+        - Activity schedule (times, dates, locations)
+        - Teacher/sponsor information
+        - School branding (logos, colors, text)
+        - Help text and instructions
+        - Error messages
+        - Contact information
+        - Policy or rule text
+        - Welcome/intro messages
+        - Other text content (specify below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-location
+    attributes:
+      label: 📍 Where Is This Content Located?
+      description: Which page or section contains the content that needs updating?
+      options:
+        - Home/landing page
+        - Activities listing page
+        - Specific activity details
+        - Navigation menu text
+        - Footer information
+        - Login page
+        - Help/instructions section
+        - Error messages throughout site
+        - Multiple locations (list below)
+        - Not sure (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: 📄 Current Content (Exact Text)
+      description: Copy and paste the exact text that currently appears and needs to be changed
+      placeholder: |
+        Example: "Welcome to Mergington High School Activities Portal. Sign up for fun activities!"
+    validations:
+      required: true
+
+  - type: textarea
+    id: new-content
+    attributes:
+      label: ✏️ New/Updated Content
+      description: Provide the exact text that should replace the current content
+      placeholder: |
+        Example: "Welcome to Mergington High School Extracurricular Activities! Discover and join activities that match your interests and schedule."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: ⏰ How Urgent Is This Update?
+      description: How quickly does this content need to be updated?
+      options:
+        - Low - Can wait until next update cycle
+        - Medium - Should be updated within a few weeks
+        - High - Needed soon, affects current operations
+        - Critical - Urgent, contains incorrect information that affects students
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason-for-change
+    attributes:
+      label: 🎯 Reason for Content Change
+      description: Why does this content need to be updated? What's wrong with the current version?
+      placeholder: |
+        Example: The current text doesn't clearly explain what students should do. We've had 10 students email asking how to sign up because the instructions are confusing.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: content-source
+    attributes:
+      label: 📚 Content Source/Authority
+      description: Where is this new content coming from?
+      options:
+        - School administration directive
+        - Teacher/department request
+        - Student feedback
+        - Parent/guardian feedback
+        - Correction of factual error
+        - Policy or procedure update
+        - Improvement suggestion
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: affected-users
+    attributes:
+      label: 👥 Who Is Affected By This Change?
+      description: Which users will see this updated content and how will it help them?
+      placeholder: |
+        Example: All students who visit the homepage will see this. It will help them understand what the site is for and how to get started.
+    validations:
+      required: true
+
+  - type: textarea
+    id: related-changes
+    attributes:
+      label: 🔗 Related Content Changes
+      description: Are there other places where similar content should be updated to stay consistent?
+      placeholder: |
+        Example: If we change the welcome message on the homepage, we should also update the email template that goes to new students.
+
+  - type: dropdown
+    id: approval-needed
+    attributes:
+      label: ✅ Approval Required?
+      description: Does this content change need approval from school administration?
+      options:
+        - No approval needed - routine update
+        - Yes, but I have verbal approval
+        - Yes, I will get written approval
+        - Not sure - please check before implementing
+        - Already approved (reference below)
+
+  - type: textarea
+    id: approval-reference
+    attributes:
+      label: 📋 Approval Reference (if applicable)
+      description: If approval was obtained, provide reference (email, meeting notes, etc.)
+      placeholder: |
+        Example: Approved by Principal Johnson in staff meeting on 3/15/2024. See email from johnson@school.edu dated 3/16/2024.
+
+  - type: textarea
+    id: style-guidelines
+    attributes:
+      label: 📝 Style or Tone Guidelines
+      description: Any specific requirements for writing style, tone, or formatting?
+      placeholder: |
+        Example: Should sound friendly but professional. Use "students" instead of "kids". Keep sentences short and clear for all reading levels.
+
+  - type: textarea
+    id: deadline-context
+    attributes:
+      label: 📅 Deadline or Timeline Context
+      description: Is there a specific deadline or reason this needs to be done by a certain time?
+      placeholder: |
+        Example: Need this updated before the new semester starts on January 20th, since that's when new students will be exploring activities.
+
+  - type: checkboxes
+    id: content-confirmation
+    attributes:
+      label: ✔️ Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have provided the exact current content and exact replacement content
+          required: true
+        - label: I have authority to request this content change or will obtain necessary approvals
+          required: true
+        - label: I understand this content will be reviewed for accuracy and consistency before implementation
+          required: true

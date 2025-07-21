@@ -1,0 +1,158 @@
+name: ⚡ Enhancement Request  
+description: Request improvements to existing features in the High School Management System
+title: "[ENHANCEMENT] "
+labels: ["enhancement", "improvement", "teacher-request"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement! This template will help you describe how to make existing features work better.
+
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: 📍 Which Feature Needs Improvement?
+      description: Select the existing feature you'd like to enhance
+      options:
+        - Activity browsing/viewing
+        - Student signup process
+        - Search functionality
+        - User interface/layout
+        - Login/authentication
+        - Activity filtering
+        - Student management
+        - Performance/speed
+        - Mobile experience
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: 📊 Current Behavior
+      description: Describe how the feature currently works
+      placeholder: |
+        Example: Currently, students can search for activities by typing in a search box, but it only searches activity names.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-pain-point
+    attributes:
+      label: 😣 What's the Problem/Pain Point?
+      description: Explain what's frustrating or limiting about the current way it works
+      placeholder: |
+        Example: Students want to find activities by location, time, or teacher name, but the search doesn't work for those. They have to scroll through all activities to find what they want.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: 💡 Proposed Improvement
+      description: Describe exactly how you'd like this feature to work better
+      placeholder: |
+        Example: Enhance the search to also look for:
+        - Activity location (gym, library, cafeteria)
+        - Day of the week
+        - Teacher/sponsor name
+        - Activity type/category
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-criteria
+    attributes:
+      label: 🎯 Success Criteria
+      description: How will we know this enhancement is successful? What should work better?
+      placeholder: |
+        Example:
+        - [ ] Students can search by typing "gym" and see all gym activities
+        - [ ] Searching "Monday" shows all Monday activities
+        - [ ] Teacher names return relevant activities
+        - [ ] Search is fast (under 1 second)
+        - [ ] Search results are clearly highlighted
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-benefit
+    attributes:
+      label: 👥 Who Benefits Most?
+      description: Who would benefit most from this improvement?
+      options:
+        - Students finding activities
+        - Teachers managing activities
+        - Both students and teachers
+        - School administrators
+        - Parents/guardians
+    validations:
+      required: true
+
+  - type: dropdown
+    id: improvement-priority
+    attributes:
+      label: 🔥 How Important Is This?
+      description: What's the priority level for this enhancement?
+      options:
+        - Low - Nice quality of life improvement
+        - Medium - Would make things noticeably better
+        - High - Significant improvement for daily use
+        - Critical - Current limitation is causing major problems
+    validations:
+      required: true
+
+  - type: textarea
+    id: usage-frequency
+    attributes:
+      label: 📈 Usage Impact
+      description: How often would this enhancement be used? Who and how many people would benefit?
+      placeholder: |
+        Example: All 300+ students use search every time they look for activities. This would help them find activities 3x faster.
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples-inspiration
+    attributes:
+      label: 🌟 Examples or Inspiration
+      description: Are there examples of this working well elsewhere? What inspired this idea?
+      placeholder: |
+        Example: Amazon's search works like this - you can search for products by any attribute. Google also does intelligent search.
+
+  - type: textarea
+    id: implementation-considerations
+    attributes:
+      label: 🛠️ Implementation Considerations
+      description: Any technical details, constraints, or suggestions for how this might work?
+      placeholder: |
+        Example: 
+        - Could use database search across multiple fields
+        - Might need to add search indexing for performance
+        - Should work on both desktop and mobile
+        - Consider showing search suggestions as user types
+
+  - type: textarea
+    id: alternative-solutions
+    attributes:
+      label: 🔄 Alternative Solutions Considered
+      description: Did you consider other ways to solve this problem? Why is this approach better?
+      placeholder: |
+        Example: Could add separate filter dropdowns, but unified search is faster for students who know what they want.
+
+  - type: checkboxes
+    id: enhancement-confirmation
+    attributes:
+      label: ✅ Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have clearly described the current limitation and proposed improvement
+          required: true
+        - label: I have explained who would benefit and how much impact this would have
+          required: true
+        - label: I understand this enhancement will be evaluated for feasibility and priority
+          required: true

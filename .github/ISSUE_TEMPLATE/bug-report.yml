@@ -1,0 +1,164 @@
+name: 🐛 Bug Report
+description: Report a problem or issue with the High School Management System
+title: "[BUG] "
+labels: ["bug", "teacher-report"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! This template will help you provide all the information needed to quickly identify and fix the issue.
+
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: 🐛 Bug Description
+      description: A clear and concise description of what the bug is
+      placeholder: |
+        Example: When students try to sign up for the "Chess Club" activity, they get an error message and the signup doesn't work.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps-to-reproduce
+    attributes:
+      label: 🔄 Steps to Reproduce
+      description: Tell us how to reproduce this behavior
+      placeholder: |
+        Example:
+        1. Go to the main activities page
+        2. Click on "Chess Club" activity card
+        3. Click the "Sign Up" button
+        4. See error message appears
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: ✅ Expected Behavior
+      description: A clear description of what you expected to happen
+      placeholder: |
+        Example: Students should be successfully signed up for Chess Club and see a confirmation message.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: ❌ Actual Behavior
+      description: A clear description of what actually happens
+      placeholder: |
+        Example: An error message appears saying "Failed to sign up" and the student is not added to the activity.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: 🚨 Severity Level
+      description: How severe is this bug?
+      options:
+        - Low - Minor cosmetic issue
+        - Medium - Affects some functionality but has workarounds
+        - High - Major functionality broken, no easy workaround
+        - Critical - System unusable, blocking all students
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-area
+    attributes:
+      label: 📍 Affected Area
+      description: Which part of the system is affected?
+      options:
+        - Student signup/registration
+        - Activity viewing/browsing
+        - User interface/display
+        - Login/authentication
+        - Search and filtering
+        - Overall system performance
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: textarea
+    id: error-messages
+    attributes:
+      label: 🚫 Error Messages
+      description: If you see any error messages, please copy them exactly here
+      placeholder: |
+        Example: "Error 500: Internal Server Error" or "Failed to connect to database"
+
+  - type: dropdown
+    id: browser-device
+    attributes:
+      label: 💻 Browser/Device Information
+      description: What browser and device are you using when this happens?
+      options:
+        - Chrome on Windows
+        - Chrome on Mac
+        - Firefox on Windows
+        - Firefox on Mac
+        - Safari on Mac
+        - Safari on iPhone/iPad
+        - Chrome on Android
+        - Other (specify in additional context)
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: 📊 How Often Does This Happen?
+      description: How frequently does this bug occur?
+      options:
+        - Always - Every time I try
+        - Often - Most of the time
+        - Sometimes - About half the time
+        - Rarely - Only occasionally
+        - Once - This was the first time
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact-description
+    attributes:
+      label: 👥 Impact on Students/Staff
+      description: Describe how this bug affects students, teachers, or daily school operations
+      placeholder: |
+        Example: 15 students tried to sign up for Chess Club today but couldn't. They're frustrated and some may lose interest in joining.
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 🔄 Temporary Workaround (if any)
+      description: Is there any way to work around this problem for now?
+      placeholder: |
+        Example: Students can email me directly and I can manually add them to the Chess Club roster.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📋 Additional Context
+      description: |
+        Add any other context about the problem here:
+        - When did this start happening?
+        - Does it happen for all activities or just specific ones?
+        - Any recent changes that might be related?
+        - Screenshots or screen recordings (if helpful)
+
+  - type: checkboxes
+    id: verification
+    attributes:
+      label: ✔️ Verification
+      description: Please confirm the following
+      options:
+        - label: I have provided clear steps to reproduce this bug
+          required: true
+        - label: I have described the impact this has on students/staff
+          required: true
+        - label: I understand this will be investigated and may require follow-up questions
+          required: true

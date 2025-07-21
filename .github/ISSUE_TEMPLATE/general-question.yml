@@ -1,0 +1,133 @@
+name: ❓ General Question or Support
+description: Ask a question or get help when you're not sure which template to use
+title: "[QUESTION] "
+labels: ["question", "support", "teacher-request"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reaching out! If you're not sure which template to use or have a general question, this form will help us understand what you need.
+
+  - type: textarea
+    id: question-description
+    attributes:
+      label: ❓ What's Your Question or Need?
+      description: Describe what you're trying to accomplish or what help you need
+      placeholder: |
+        Example: I want students to be able to see which activities are happening this week, but I'm not sure if this is a bug fix or a new feature request.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: help-category
+    attributes:
+      label: 🎯 What Type of Help Do You Think You Need?
+      description: Select the category that seems closest to your request
+      options:
+        - Report something that's broken (Bug)
+        - Request a completely new feature (Feature Request)
+        - Improve something that already exists (Enhancement)
+        - Change how something looks (UI/UX)
+        - Update text or information (Content Update)
+        - Ask how to use something (User Support)
+        - Get technical help or training (Technical Support)
+        - Something else or I'm not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-situation
+    attributes:
+      label: 📊 What's Currently Happening?
+      description: Describe the current situation - what works, what doesn't, or what's missing
+      placeholder: |
+        Example: Right now students can see all activities, but they have to scroll through everything to find what's happening this week. It's hard for them to plan their schedule.
+    validations:
+      required: true
+
+  - type: textarea
+    id: desired-outcome
+    attributes:
+      label: 🎯 What Would You Like to Happen?
+      description: Describe your ideal outcome - how would you like things to work?
+      placeholder: |
+        Example: I'd like students to easily see just the activities happening this week, so they can plan better and not miss things.
+
+  - type: dropdown
+    id: user-affected
+    attributes:
+      label: 👥 Who Is Affected?
+      description: Who is experiencing this issue or would benefit from the solution?
+      options:
+        - Students
+        - Teachers/Staff
+        - Both students and teachers
+        - Parents/Guardians
+        - School administrators
+        - External visitors
+        - Everyone
+    validations:
+      required: true
+
+  - type: dropdown
+    id: impact-level
+    attributes:
+      label: 📈 How Much Does This Impact Daily Activities?
+      description: How much does this affect day-to-day school operations?
+      options:
+        - No impact - just a nice-to-have improvement
+        - Minimal impact - small inconvenience
+        - Moderate impact - causes some frustration or inefficiency
+        - High impact - significantly affects how people use the system
+        - Critical impact - blocking important school activities
+    validations:
+      required: true
+
+  - type: textarea
+    id: tried-solutions
+    attributes:
+      label: 🔄 What Have You Tried Already?
+      description: Have you tried any workarounds or solutions? What happened?
+      placeholder: |
+        Example: I've been sending weekly emails to students listing this week's activities, but they don't always read email and it's extra work for me.
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📋 Additional Information
+      description: |
+        Any other details that might help us understand your request:
+        - When did you first notice this issue/need?
+        - How many people are affected?
+        - Are there any deadlines or time constraints?
+        - Any similar features you've seen elsewhere?
+
+  - type: dropdown
+    id: follow-up-preference
+    attributes:
+      label: 📞 Follow-up Preference
+      description: How would you prefer to receive follow-up communication about this request?
+      options:
+        - GitHub comments on this issue
+        - Email (provide in additional context)
+        - In-person discussion
+        - Phone/video call
+        - No preference
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: general-confirmation
+    attributes:
+      label: ✅ Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have provided enough detail about what I need help with
+          required: true
+        - label: I understand this may be converted to a more specific issue type after review
+          required: true
+        - label: I'm available for follow-up questions if more clarification is needed
+          required: true

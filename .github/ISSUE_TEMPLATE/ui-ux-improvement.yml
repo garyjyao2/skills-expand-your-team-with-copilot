@@ -1,0 +1,186 @@
+name: 🎨 UI/UX Improvement
+description: Request visual design or user experience improvements for the High School Management System
+title: "[UI/UX] "
+labels: ["ui/ux", "design", "teacher-request"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a UI/UX improvement! This template will help you describe visual or user experience changes that would make the system better for students and staff.
+
+  - type: dropdown
+    id: improvement-type
+    attributes:
+      label: 🎯 Type of UI/UX Improvement
+      description: What kind of improvement are you requesting?
+      options:
+        - Visual design/appearance
+        - Layout and organization
+        - Navigation and user flow
+        - Mobile responsiveness
+        - Accessibility improvements
+        - Loading and performance feedback
+        - Error messages and user guidance
+        - Color scheme and branding
+        - Typography and readability
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: affected-page
+    attributes:
+      label: 📍 Which Page/Section Needs Improvement?
+      description: Where in the application should this change be made?
+      options:
+        - Home/landing page
+        - Activities listing page
+        - Individual activity details
+        - Student signup forms
+        - Search and filter area
+        - Navigation menu/header
+        - Footer
+        - Login/authentication pages
+        - Mobile view (all pages)
+        - Entire application (global change)
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-issue
+    attributes:
+      label: 😕 Current UI/UX Problem
+      description: Describe what's currently confusing, difficult, or unappealing about the user experience
+      placeholder: |
+        Example: The activity cards are too small and cramped. Students have trouble reading the activity details and often click the wrong activity by mistake.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-improvement
+    attributes:
+      label: ✨ Proposed UI/UX Improvement
+      description: Describe exactly how you'd like the interface to look or work differently
+      placeholder: |
+        Example: 
+        - Make activity cards larger with more spacing
+        - Use bigger, easier-to-read fonts
+        - Add more visual separation between different pieces of information
+        - Make the signup button more prominent and easier to click
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-impact
+    attributes:
+      label: 👥 Who Would This Help Most?
+      description: Which users would benefit most from this UI/UX improvement?
+      options:
+        - Students browsing activities
+        - Students on mobile devices
+        - Teachers managing content
+        - Users with visual impairments
+        - New/first-time users
+        - All users equally
+        - Specific group (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-feedback
+    attributes:
+      label: 💬 User Feedback or Complaints
+      description: Have students or staff mentioned specific problems with the current design?
+      placeholder: |
+        Example: Three students said they accidentally signed up for the wrong activity because the buttons were too close together. One student with glasses said the text is too small to read comfortably.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: device-priority
+    attributes:
+      label: 📱 Device Priority
+      description: Which device experience is most important for this improvement?
+      options:
+        - Desktop computers (school labs)
+        - Mobile phones (student personal devices)
+        - Tablets (school devices)
+        - All devices equally important
+        - Specific device (describe below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: visual-examples
+    attributes:
+      label: 🖼️ Visual Examples or References
+      description: Describe or reference examples of good design that inspired this request
+      placeholder: |
+        Example: The school district's main website has a nice clean layout with good spacing. Instagram's card layout is easy to browse. Netflix makes it easy to see details without clicking.
+
+  - type: dropdown
+    id: urgency-level
+    attributes:
+      label: ⏰ Urgency Level
+      description: How urgently is this improvement needed?
+      options:
+        - Low - Would be nice to have eventually
+        - Medium - Would improve daily user experience
+        - High - Current design is causing user frustration
+        - Critical - Current design is blocking users from completing tasks
+    validations:
+      required: true
+
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: 📊 How Will We Know This Worked?
+      description: What would indicate that this UI/UX improvement was successful?
+      placeholder: |
+        Example:
+        - Students stop clicking wrong activities by mistake
+        - Fewer complaints about text being hard to read
+        - Students can complete signup faster
+        - Mobile users have an easier time navigating
+        - Teachers get fewer questions about how to use the system
+
+  - type: textarea
+    id: accessibility-considerations
+    attributes:
+      label: ♿ Accessibility Considerations
+      description: Should this improvement consider users with disabilities or special needs?
+      placeholder: |
+        Example: Make sure colors have good contrast for visually impaired users. Ensure buttons are large enough for users with motor difficulties.
+
+  - type: textarea
+    id: brand-school-requirements
+    attributes:
+      label: 🏫 School Branding Requirements
+      description: Are there specific school colors, fonts, or branding guidelines that should be followed?
+      placeholder: |
+        Example: School colors are lime green and white. Logo should be prominently displayed. Should look professional for parent/guardian viewing.
+
+  - type: textarea
+    id: implementation-hints
+    attributes:
+      label: 💭 Implementation Suggestions (Optional)
+      description: Any specific ideas about how this might be implemented?
+      placeholder: |
+        Example: Could use CSS Grid for better layout, larger font sizes, more padding between elements, different color schemes.
+
+  - type: checkboxes
+    id: ui-confirmation
+    attributes:
+      label: ✅ Confirmation
+      description: Please confirm the following
+      options:
+        - label: I have clearly described the current UI/UX problem and proposed solution
+          required: true
+        - label: I have considered how this affects different types of users and devices
+          required: true
+        - label: I understand this improvement will be evaluated for design consistency and feasibility
+          required: true
