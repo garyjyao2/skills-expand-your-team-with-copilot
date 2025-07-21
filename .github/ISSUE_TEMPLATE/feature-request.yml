@@ -1,0 +1,112 @@
+name: 🚀 Feature Request
+description: Request a new feature or functionality for the High School Management System
+title: "[FEATURE] "
+labels: ["enhancement", "teacher-request"]
+assignees:
+  - copilot
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to request a new feature! This template will help you provide all the details needed for Copilot to implement your request.
+
+  - type: textarea
+    id: problem-description
+    attributes:
+      label: 🎯 Problem Description
+      description: Clearly describe what problem this feature would solve or what need it would address
+      placeholder: |
+        Example: Students are having trouble finding activities that match their skill level. They want to be able to filter activities by difficulty.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: 💡 Proposed Solution
+      description: Describe what you'd like to happen. Be as specific as possible about the desired functionality.
+      placeholder: |
+        Example: Add a dropdown filter in the sidebar that allows students to filter activities by:
+        - Beginner level
+        - Intermediate level  
+        - Advanced level
+        - All levels (default)
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: ✅ Acceptance Criteria
+      description: List the specific requirements that must be met for this feature to be considered complete
+      placeholder: |
+        Example:
+        - [ ] New "difficulty" field added to activity data model
+        - [ ] Dropdown filter appears in left sidebar
+        - [ ] Filter works correctly to show/hide activities
+        - [ ] Activities without difficulty set show in "All levels"
+        - [ ] Filter state persists when navigating
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: 🔥 Priority Level
+      description: How urgent is this feature request?
+      options:
+        - Low - Nice to have
+        - Medium - Would improve user experience
+        - High - Important for daily use
+        - Critical - Blocking student activities
+    validations:
+      required: true
+
+  - type: dropdown
+    id: user-type
+    attributes:
+      label: 👤 Primary Users
+      description: Who would primarily benefit from this feature?
+      options:
+        - Students
+        - Teachers/Staff
+        - Both Students and Teachers
+        - Administrators
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: 📋 Additional Context
+      description: |
+        Provide any additional information that might help with implementation:
+        - Similar features you've seen elsewhere
+        - Specific UI/UX preferences
+        - Technical constraints or requirements
+        - Related features that might be affected
+      placeholder: |
+        Example: This should work similar to the filter on other school websites. The filter should be prominently visible but not take up too much space.
+
+  - type: textarea
+    id: hints-tips
+    attributes:
+      label: 💭 Implementation Hints (Optional)
+      description: If you have any suggestions for how this might be implemented, share them here
+      placeholder: |
+        Example: 
+        - The difficulty field could be added to the activities database table
+        - Frontend filter could use JavaScript to show/hide activity cards
+        - Consider using a select dropdown or radio buttons for the filter
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 📝 Confirmation
+      description: Please confirm you understand the following
+      options:
+        - label: I have provided enough detail for a developer to understand and implement this feature
+          required: true
+        - label: I understand this request will be reviewed and may take time to implement
+          required: true
